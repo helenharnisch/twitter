@@ -3,6 +3,8 @@
 function agregar(){
 	// tomo texto de textarea
 	var tareas = document.getElementById('tarea').value;
+	//se limpia textarea
+	document.getElementById('tarea').value = "";
 	// creo elemento div 
 	var nuevasTareas = document.createElement('div');
 	//contenedor donde irán las tareas
@@ -20,7 +22,9 @@ function agregar(){
 	chck.type = 'checkbox';
 	chck.setAttribute('class', 'check');
 	var basura = document.createElement('span');
-	basura.setAttribute('class', 'glyphicon glyphicon-trash trash');
+	basura.classList.add('glyphicon', 'glyphicon-trash', 'trash');
+	var cora = document.createElement('span');
+	cora.classList.add('glyphicon', 'glyphicon-heart' , 'corazon');
 
 	//nodo texto del textarea
 	var textoNuevaTarea = document.createTextNode(tareas);
@@ -32,10 +36,27 @@ function agregar(){
 	//paso checkbox a div
 	nuevasTareas.appendChild(chck);
 	nuevasTareas.appendChild(basura);
+	nuevasTareas.appendChild(cora);
 	//paso span a div
 	nuevasTareas.appendChild(elementoContenedor);
 	cont.appendChild(nuevasTareas);
+
+	//tachado
+	chck.addEventListener('click', function(){
+		elementoContenedor.classList.toggle('tachado'); //agrego clase tachado a span contenedor de tareas, se activa al hacer click
+	})
+
+	//remover tarea
+	basura.addEventListener('click', function(){
+		cont.removeChild(nuevasTareas); //remueve tareas agregadas al div contenedor, se activa al hacer click
+	})	
+
+	//corazon rojo
+	cora.addEventListener('click', function(){
+		cora.classList.toggle('red'); //agrega clase red al elemento span del corazon
+	})
 }
+
 
 
 
