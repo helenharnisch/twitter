@@ -1,8 +1,10 @@
-.navbar-default {
-	background-color: #1DA1F2;
-	margin-bottom: 70px;
-	height: 130px;
-	box-shadow: 0px 1px 24px -6px rgba(0,0,0,1);
+html
+{
+    position: relative; 
+    min-height: 100%;
+}
+body{
+	background-color: #E5E3F2;
 }
 textarea {
 	width: 100%;
@@ -15,6 +17,12 @@ textarea {
 	margin-bottom: 10px;
 	overflow: scroll;
 	overflow-x: hidden;
+}
+.navbar-default {
+	background-color: #1DA1F2;
+	margin-bottom: 70px;
+	height: 130px;
+	box-shadow: 0px 1px 24px -6px rgba(0,0,0,1);
 }
 .tit{
 	margin-top: -100px;
@@ -36,25 +44,15 @@ textarea {
 #boton:hover{
 	background-color: #167EBF; 
 }
-body{
-	background-color: #E5E3F2;
-}
-#contenedor span{
-	margin-left: 10px;
-	margin-bottom: 20px;
-
-}
-.navbar-default .navbar-toggle .icon-bar {
-	background-color: #FFF;
-}
 #contenedor{
 	background-color: #FFF;
 	border-radius: 5px;
 	width: 100%;
 	color: #4E4D53;
 }
-.text-left{
-	color: #FFF;
+#contenedor span{
+	margin-left: 10px;
+	margin-bottom: 20px;
 }
 #contenedor div {
 	padding-top: 10px;
@@ -62,12 +60,15 @@ body{
 	padding-left: 5px;
 	outline: 2px solid #E5E3F2;
 }
+.text-left{
+	color: #FFF;
+}
 .grumpy{
 	width: 100px;
 	border-radius: 100px;
 	box-shadow: 0px 1px 24px -6px rgba(0,0,0,1);
 }
-.menu {
+.menu{
 	list-style: none;
 	margin-top: 70px;
 }
@@ -88,18 +89,20 @@ body{
 	font-size: 20px;
 	padding-top: 7px;
 }
-.f-background p{
-	color: black;
-}
 footer {
-	position: fixed;
+    bottom: 0;
+    position: absolute;	
+	padding-top: 20px;
 	height: 40px;
-	bottom: 0;
 	width: 100%;
 }
 footer span{
-	margin-right: 30px;
-	margin-left: 30px; 
+	margin-right: 20px;
+	margin-left: 20px; 
+}
+footer span:hover{
+	color: #1DA1F2;
+	cursor: pointer;
 }
 .men-foo a{
 	font-size: 14px;
@@ -112,28 +115,22 @@ footer span{
 	color: #1DA1F2;
 	cursor: pointer;
 }
-footer span:hover{
-	color: #1DA1F2;
-	cursor: pointer;
-}
 .trash{
 	float: right;
 	margin-right: 10px;
-}
-.corazon{
-	float: right;
 }
 .trash:hover{
 	color: #1DA1F2;
 	cursor: pointer;
 }
-.text-left input{
-	text-decoration: line-through;
+.corazon{
+	float: right;
 }
 .tachado {
 	text-decoration: line-through;
+	color: #1DA1F2;
 }
 .red{
-	color: #A90003;
+	color: #FC1E26;
 	cursor: pointer;
 }
